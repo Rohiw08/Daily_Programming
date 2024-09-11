@@ -12,15 +12,8 @@ void sortColors(vector<int>& nums) {
     }
 }
 
-void printa(auto a){
-    for(auto i : a){
-        cout<<i<<" ";
-    }
-}
-
 int main(){
     vector<int> question = {0, 1, 2, 1, 0, 2, 1, 0};
     sortColors(question);
-    printa(question);
     return 0;
 }
