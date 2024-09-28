@@ -4,7 +4,7 @@
 using namespace std;
 
 void insert(stack<int> &s, int temp) {
-    if(s.empty() || s.top() <= temp) {
+    if(s.empty() || s.top() >= temp) {
         s.push(temp);
         return;
     }
@@ -25,18 +25,11 @@ void sort(stack<int> &s) {
     insert(s, temp);
 }
 
-void print_stack(stack<int> &s) {
-    stack<int> temp;
-
-    while(!s.empty()) {
-        temp.push(s.top());
-        s.pop();
-    }
-    
+void print_stack(stack<int> s) {
     cout << "[";
-    while(!temp.empty()) {
-        cout << temp.top() << " ";
-        temp.pop();
+    while(!s.empty()) {
+        cout << s.top() << " ";
+        s.pop();
     }
     cout << "]" << endl;
 }
